@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>VIVEK ACCUPRESUR · Holistic Health</title>
+  <!-- Tailwind via CDN + base layer -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      scroll-behavior: smooth;
+      min-height: 100vh;
+    }
+    .bg-earth-green { background-color: #2D6A4F; }
+    .text-earth-green { color: #2D6A4F; }
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #1D3557;
+      border-left: 5px solid #2D6A4F;
+      padding-left: 1rem;
+    }
+    .clinic-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 8px 32px rgba(0, 20, 10, 0.08);
+      border: 1px solid rgba(45, 106, 79, 0.10);
+      transition: all 0.3s ease;
+    }
+    .clinic-card:hover {
+      border-color: #2D6A4F40;
+      box-shadow: 0 12px 40px rgba(45, 106, 79, 0.12);
+      transform: translateY(-2px);
+    }
+    .doctor-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 999px;
+      margin: 0 auto 1rem;
+      object-fit: cover;
+      border: 4px solid #D8F3DC;
+      display: block;
+      box-shadow: 0 4px 20px rgba(45, 106, 79, 0.15);
+      transition: transform 0.3s ease;
+    }
+    .doctor-avatar:hover {
+      transform: scale(1.03);
+    }
+    .footer a {
+      color: #D8F3DC;
+      transition: color 0.2s;
+    }
+    .footer a:hover { color: white; }
+    .hero-photo {
+      width: 100%;
+      border-radius: 32px;
+      box-shadow: 0 16px 48px rgba(0, 20, 10, 0.12);
+      display: block;
+      object-fit: cover;
+      max-height: 420px;
+      transition: transform 0.4s ease;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .hero-photo:hover {
+      transform: scale(1.01);
+    }
+    @media (max-width: 640px) {
+      .hero-photo { max-height: 280px; }
+      .doctor-avatar { width: 100px; height: 100px; }
+    }
+    .doctor-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 3rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 20, 10, 0.06);
+      border: 1px solid rgba(45, 106, 79, 0.08);
+      transition: all 0.3s ease;
+    }
+    .doctor-card:hover {
+      border-color: #2D6A4F30;
+      box-shadow: 0 12px 40px rgba(45, 106, 79, 0.10);
+      transform: translateY(-3px);
+    }
+    .hero-badge {
+      background: linear-gradient(135deg, #D8F3DC, #b7e4c7);
+      color: #1D3557;
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 3rem;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .header-glass {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(45, 106, 79, 0.08);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header-glass sticky top-0 z-30 shadow-sm">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-wrap items-center justify-between py-3 md:py-4">
+      <div class="flex items-center gap-3">
+        <div class="bg-[#2D6A4F] p-2 rounded-2xl shadow-lg">
+          <i class="fas fa-leaf text-2xl text-white"></i>
+        </div>
+        <span class="font-bold text-sm sm:text-base tracking-tight text-[#1D3557] leading-tight">
+          VIVEK ACCUPRESUR <br class="hidden sm:inline"><span class="font-light text-[#2D6A4F]">NATURE HEALTH CARE</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="max-w-6xl mx-auto px-5 sm:px-8 pt-8 pb-12 md:pt-12 md:pb-16">
+    <div class="grid md:grid-cols-5 gap-10 items-center">
+      <div class="md:col-span-2 order-2 md:order-1">
+        <span class="inline-block hero-badge text-xs font-bold tracking-widest px-5 py-2 rounded-full mb-4 shadow-sm">
+          <i class="fas fa-spa mr-2"></i> HOLISTIC HEALING, NATURALLY.
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-[#1D3557]">
+          Treat Chronic & Acute Conditions <span class="text-[#2D6A4F]">Safely & Effectively</span>
+        </h1>
+        <p class="text-gray-600 mt-4 max-w-md text-base leading-relaxed">
+          Natural acupressure & ayurvedic therapies – root-cause healing without harmful chemicals or side effects.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="inline-flex items-center gap-2 bg-[#D8F3DC]/50 px-4 py-2 rounded-full text-sm font-medium text-[#1D3557]">
+            <i class="fas fa-check-circle text-[#2D6A4F]"></i> 15+ Years Experience
+          </span>
+          <span class="inline-flex items-center gap-2 bg-[#D8F3DC]/50 px-4 py-2 rounded-full text-sm font-medium text-[#1D3557]">
+            <i class="fas fa-heart text-[#2D6A4F]"></i> 5000+ Happy Patients
+          </span>
+        </div>
+      </div>
+      <div class="md:col-span-3 order-1 md:order-2">
+        <!-- Yahan aapka direct link set kar diya hai -->
+        <img src="https://i.postimg.cc/FzCCWX6R/IMG-2026090" alt="Vivek Acupressure Clinic" class="hero-photo" 
+             onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22400%22%3E%3Crect fill=%22%23d8f3dc%22 width=%22800%22 height=%22400%22/%3E%3Ctext x=%22400%22 y=%22200%22 font-family=%22sans-serif%22 font-size=%2230%22 fill=%22%232d6a4f%22 text-anchor=%22middle%22%3E%F0%9F%8C%BF VIVEK ACCUPRESUR%3C/text%3E%3C/svg%3E'">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="max-w-6xl mx-auto px-5 sm:px-8 py-8 md:py-14">
+    <div class="glass-card p-8 md:p-12 shadow-xl">
+      <h2 class="section-title text-3xl md:text-4xl">About Our Clinic</h2>
+      <p class="mt-5 text-gray-700 leading-relaxed text-base md:text-lg max-w-4xl">
+        Welcome to <strong class="text-[#2D6A4F]">Vivek Acupressure Nature Health Care</strong>. We specialize in comprehensive holistic treatments for all types of acute and chronic health conditions. 
+        Utilizing a combination of traditional acupressure techniques, Ayurvedic therapies, and natural wellness practices, we aim to treat the root cause of illnesses safely and effectively without harmful chemicals or side effects.
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-6 text-[#2D6A4F]">
+        <span class="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full shadow-sm"><i class="fas fa-leaf text-xl"></i> Natural Healing</span>
+        <span class="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full shadow-sm"><i class="fas fa-shield-alt text-xl"></i> Safe & Proven</span>
+        <span class="flex items-center gap-2 bg-white/60 px-4 py-2 rounded-full shadow-sm"><i class="fas fa-user-md text-xl"></i> Expert Care</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOCTORS ===== -->
+  <section id="doctors" class="max-w-6xl mx-auto px-5 sm:px-8 py-8 md:py-14">
+    <h2 class="section-title text-3xl md:text-4xl mb-10">Meet Our Specialists</h2>
+    <div class="grid sm:grid-cols-2 gap-8">
+      
+      <!-- Doctor 1 -->
+      <div class="doctor-card">
+        <img src="https://ui-avatars.com/api/?name=Dr+Ashok+Kushwaha&size=130&background=2D6A4F&color=fff&bold=true&font-size=0.5" 
+             alt="Dr. Ashok Kushwaha" class="doctor-avatar">
+        <h3 class="text-2xl font-bold text-[#1D3557]">Dr. Ashok Kushwaha</h3>
+        <p class="text-[#2D6A4F] font-semibold text-sm tracking-wide">Senior Acupressure Practitioner</p>
+        <div class="mt-4 flex justify-center items-center gap-2">
+          <i class="fas fa-phone-alt text-[#2D6A4F]"></i>
+          <a href="tel:+919876543210" class="text-[#1D3557] hover:text-[#2D6A4F] transition font-medium">+91 98765 43210</a>
+        </div>
+        <div class="mt-3 flex justify-center gap-1 text-[#2D6A4F] text-lg">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <div class="mt-3 inline-block bg-[#D8F3DC]/30 px-4 py-1 rounded-full text-xs font-medium text-[#1D3557]">
+          <i class="far fa-clock mr-1"></i> 15+ Years Experience
+        </div>
+      </div>
+
+      <!-- Doctor 2 -->
+      <div class="doctor-card">
+        <img src="https://ui-avatars.com/api/?name=Umarawati+Devi&size=130&background=1D3557&color=fff&bold=true&font-size=0.5" 
+             alt="Umarawati Devi" class="doctor-avatar">
+        <h3 class="text-2xl font-bold text-[#1D3557]">Umarawati Devi</h3>
+        <p class="text-[#2D6A4F] font-semibold text-sm tracking-wide">Holistic Health Expert</p>
+        <div class="mt-4 flex justify-center items-center gap-2">
+          <i class="fas fa-phone-alt text-[#2D6A4F]"></i>
+          <a href="tel:+919876543211" class="text-[#1D3557] hover:text-[#2D6A4F] transition font-medium">+91 98765 43211</a>
+        </div>
+        <div class="mt-3 flex justify-center gap-1 text-[#2D6A4F] text-lg">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <div class="mt-3 inline-block bg-[#D8F3DC]/30 px-4 py-1 rounded-full text-xs font-medium text-[#1D3557]">
+          <i class="far fa-clock mr-1"></i> 12+ Years Experience
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CLINICS ===== -->
+  <section id="clinics" class="max-w-6xl mx-auto px-5 sm:px-8 py-8 md:py-14">
+    <h2 class="section-title text-3xl md:text-4xl mb-10">Our Clinics & Schedule</h2>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div class="clinic-card">
+        <div class="flex items-start gap-4">
+          <div class="bg-[#2D6A4F]/10 p-3 rounded-2xl">
+            <i class="fas fa-location-dot text-2xl text-[#2D6A4F]"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1D3557]">Salempur Clinic</h3>
+            <p class="text-gray-600 text-sm mt-1"><i class="fas fa-map-pin mr-1 text-[#2D6A4F]"></i> Near Kotwali, Salempur, Deoria, Uttar Pradesh.</p>
+            <div class="mt-3 bg-[#D8F3DC]/40 rounded-full inline-block px-4 py-1.5 text-xs font-semibold text-[#1D3557]">
+              <i class="far fa-calendar-alt mr-1"></i> Sun, Mon, Tue, Wed, Fri, Sat · Thu Closed
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm text-[#2D6A4F]">
+          <span class="bg-[#D8F3DC]/30 px-3 py-1.5 rounded-full"><i class="far fa-clock mr-1"></i> 9:00 AM – 7:00 PM</span>
+        </div>
+      </div>
+      <div class="clinic-card">
+        <div class="flex items-start gap-4">
+          <div class="bg-[#2D6A4F]/10 p-3 rounded-2xl">
+            <i class="fas fa-location-dot text-2xl text-[#2D6A4F]"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-[#1D3557]">Bhatpar Rani Clinic</h3>
+            <p class="text-gray-600 text-sm mt-1"><i class="fas fa-map-pin mr-1 text-[#2D6A4F]"></i> Near Global Computer Institute, Belpar Dhala, Bhatpar Rani, Deoria, Uttar Pradesh.</p>
+            <div class="mt-3 bg-[#D8F3DC]/40 rounded-full inline-block px-4 py-1.5 text-xs font-semibold text-[#1D3557]">
+              <i class="fas fa-phone-alt mr-1"></i> Visit or Call for Schedule
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2 text-sm text-[#2D6A4F]">
+          <span class="bg-[#D8F3DC]/30 px-3 py-1.5 rounded-full"><i class="fas fa-phone-alt mr-1"></i> +91 98765 43210</span>
+          <span class="bg-[#D8F3DC]/30 px-3 py-1.5 rounded-full"><i class="fas fa-phone-alt mr-1"></i> +91 98765 43211</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-[#1D3557] text-[#D8F3DC] mt-8 pt-12 pb-6 footer">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <h4 class="font-bold text-white text-lg flex items-center gap-2">
+          <i class="fas fa-leaf text-[#D8F3DC]"></i>VIVEK ACCUPRESUR
+        </h4>
+        <p class="text-sm text-[#D8F3DC]/70 mt-2 leading-relaxed">Holistic acupressure & nature-based healing. Treating root causes with care.</p>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white text-sm uppercase tracking-wider">Contact</h5>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="tel:+919876543210"><i class="fas fa-phone-alt mr-2"></i>+91 98765 43210</a></li>
+          <li><a href="tel:+919876543211"><i class="fas fa-phone-alt mr-2"></i>+91 98765 43211</a></li>
+          <li><i class="fas fa-envelope mr-2"></i> info@vivekhealth.in</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white text-sm uppercase tracking-wider">Clinics</h5>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><i class="fas fa-location-dot mr-2 w-4"></i>Salempur, Deoria</li>
+          <li><i class="fas fa-location-dot mr-2 w-4"></i>Bhatpar Rani, Deoria</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-semibold text-white text-sm uppercase tracking-wider">Visit</h5>
+        <address class="not-italic text-sm mt-2 leading-relaxed text-[#D8F3DC]/80">
+          Near Kotwali, Salempur<br>
+          Deoria, Uttar Pradesh 274001
+        </address>
+        <p class="text-xs mt-3 text-[#D8F3DC]/40">© 2026 · All rights reserved</p>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 mt-8 pt-5 border-t border-[#D8F3DC]/10 text-center text-[#D8F3DC]/40 text-xs">
+      <span>🌿 Holistic healing, naturally.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
